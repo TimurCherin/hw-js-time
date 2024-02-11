@@ -2,7 +2,7 @@ const minutesTimer = document.querySelector(".minutes-timer")
 const timer = document.querySelector(".timer")
 const btn = document.querySelector(".btn")
 let time = 60;
-setInterval(countMinutes, 60000)
+let timerId = setInterval(countMinutes, 60000)
 function countMinutes(){
     if(time !== 0){
         time--;
@@ -10,6 +10,9 @@ function countMinutes(){
     minutesTimer.textContent = `minutes: ${time}`
     if(time === 30){
         alert("залишилось менше половини часу")
+    }
+    if(time === 0){
+        clearInterval(timerId)
     }
 }
 let timerTime = 30
