@@ -17,7 +17,7 @@ function countMinutes(){
 const timer = document.querySelector(".timer")
 const btn = document.querySelector(".btn")
 let timerTime = 30
-const id = setInterval(countSeconds, 200)
+let id = setInterval(countSeconds, 1000)
 function countSeconds(){
     if(timerTime !== 0){
         timerTime--;
@@ -36,5 +36,5 @@ btn.addEventListener("click", update)
 function update(){
     timerTime = 30
     btn.classList.add("hide")
-    const id = setInterval(countSeconds, 200)
+    id = setInterval(countSeconds, 1000)
 }
