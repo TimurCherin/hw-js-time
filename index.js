@@ -1,6 +1,4 @@
 const minutesTimer = document.querySelector(".minutes-timer")
-const timer = document.querySelector(".timer")
-const btn = document.querySelector(".btn")
 let time = 60;
 let timerId = setInterval(countMinutes, 60000)
 function countMinutes(){
@@ -15,6 +13,9 @@ function countMinutes(){
         clearInterval(timerId)
     }
 }
+// ex 2
+const timer = document.querySelector(".timer")
+const btn = document.querySelector(".btn")
 let timerTime = 30
 setInterval(countSeconds, 200)
 function countSeconds(){
